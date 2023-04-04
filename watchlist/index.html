@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title></title>
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="../src/output.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+			integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+	</head>
+	<body>
+		<header class="mx-5 mt-7 lg:mx-20">
+			<div class="grid grid-cols-5 justify-between text gap-2">
+				<div class="flex flex-col w-max text-3xl font-semibold">
+					<p>The</p>
+					<p>Movie</p>
+					<p>Watchlist</p>
+				</div>
+				<div class="col-start-2 col-end-5 hidden xl:block lg:block">
+					<input
+						type="text"
+						placeholder="&#xF002; Search a movie or a series"
+						class="text-center w-full bg-gray-200 rounded-full h-16"
+					/>
+				</div>
+
+				<div
+					class="col-start-4 col-end-5 text-center bg-gray-200 rounded-full h-10 w-10 float-right ml-auto xl:hidden lg:hidden"
+				>
+					<i
+						class="fa-solid fa-magnifying-glass fa-xl before:mt-5 before:block"
+					></i>
+				</div>
+
+				<div
+					class="col-start-5 col-end-6 text-center bg-gray-200 rounded-full h-10 w-10 float-right ml-auto xl:hidden lg:hidden"
+				>
+					<i
+						class="fa-sharp fa-regular fa-bookmark fa-xl before:mt-5 before:block"
+					></i>
+				</div>
+				<div
+					class="col-start-5 col-end-6 text-center hidden bg-gray-200 rounded-full h-10 w-10 float-right ml-auto xl:block xl:w-fit xl:px-8 lg:block lg:w-fit lg:px-8"
+				>
+					<i
+						class="fa-sharp fa-regular fa-bookmark fa-xl before:mt-5 before:block"
+					></i>
+					<span>Watchlist</span>
+				</div>
+			</div>
+		</header>
+		<section
+			class="flex flex-wrap mx-5 mt-7 gap-5 w-fit lg:mx-20"
+			id="section-container"
+		></section>
+
+		<script src="index.js" async defer></script>
+	</body>
+</html>

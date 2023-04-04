@@ -1,13 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html>
 	<head>
-		<meta charset="UTF-8" />
+		<meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
+		<title></title>
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="../src/output.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+			integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
 	</head>
 	<body>
-		<header class="mt-7 mx-4">
+		<header class="mx-5 mt-7 lg:mx-20">
 			<div class="grid grid-cols-5 justify-between text gap-2">
 				<div class="flex flex-col w-max text-3xl font-semibold">
 					<p>The</p>
@@ -38,7 +48,7 @@
 					></i>
 				</div>
 				<div
-					class="col-start-5 col-end-6 text-center hidden bg-gray-200 rounded-full h-10 w-10 float-right ml-auto xl:block xl:w-fit xl:px-8 lg:block lg:w-fit lg:px-8"
+					class="col-start-5 col-end-6 text-center hidden bg-gray-200 rounded-full h-10 w-10 float-right ml-auto xl:hidden xl:w-fit xl:px-8 lg:hidden lg:w-fit lg:px-8"
 				>
 					<i
 						class="fa-sharp fa-regular fa-bookmark fa-xl before:mt-5 before:block"
@@ -47,5 +57,59 @@
 				</div>
 			</div>
 		</header>
+		<section id="section-container" class="mx-5 lg:mx-20 mt-8">
+			<div class="flex flex-row lg:grid lg:grid-cols-3">
+				<div>
+					<p class="text-[40px] font-bold">The Gray Man</p>
+				</div>
+				<div
+					class="bg-gray-200 rounded-full w-fit col-start-3 text-right px-8 py-3 ml-auto hidden lg:block"
+				>
+					<i
+						class="fa-sharp fa-regular fa-bookmark fa-xl before:mt-5 before:block"
+					></i>
+					<span>Save to Watchlist</span>
+				</div>
+			</div>
+			<div class="w-full mx-auto flex flex-col-reverse lg:flex-row mt-7">
+				<img
+					src="https://th.bing.com/th/id/OIP.D7tKNbnOXs-jFkXVKkq8pQHaLH?w=131&h=196&c=7&r=0&o=5&pid=1.7"
+					class="rounded-2xl w-48 h-72 hidden lg:block"
+				/>
+				<div class="ml-4 grid mt-2">
+					<div class="w-fit h-fit mt-4">
+						<span class="border-2 py-2 px-4 rounded-full border-black"
+							>Action</span
+						>
+						<span class="border-2 py-2 px-4 rounded-full border-black"
+							>Sci-Fi</span
+						>
+					</div>
+					<div class="w-auto mt-4">
+						<span class="text-lg font-medium">
+							A thief who steals corporate secrets through the use of
+							dream-sharing technology is given the inverse task of planting an
+							idea into the mind of a C.E.O., but his tragic past may doom the
+							project and his team to disaster.
+						</span>
+					</div>
+					<div class="mt-4">
+						<p>IMDB Rating</p>
+						<p>
+							<i class="fa-solid fa-star" style="color: #fffa5c"></i>
+							<span>9.5/10</span>
+						</p>
+					</div>
+				</div>
+				<div class="mx-auto">
+					<iframe
+						src="https://www.youtube.com/embed/6ZfuNTqbHE8"
+						class="h-full rounded-3xl"
+					></iframe>
+				</div>
+			</div>
+		</section>
+
+		<script src="index.js" async defer></script>
 	</body>
 </html>
