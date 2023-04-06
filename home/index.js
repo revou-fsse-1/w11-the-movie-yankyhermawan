@@ -4,8 +4,9 @@ async function getCurrentWatch() {
 	const currentWatch = [];
 	data.forEach((element) => {
 		currentWatch.push(
-			`<a href = "../details/index.html?id=${element.id}">
+			`<a href = "../details/index.html?id=${element.id}" class="relative w-max">
 			<img src = ${element.image} class = "w-40 h-60 rounded-2xl"/>
+			<span class="bg-white absolute top-0 opacity-0 w-full h-full flex items-center justify-center text-center text-xl hover:opacity-50">${element.rating}/10</span>
 			</a>`
 		);
 	});
@@ -18,8 +19,9 @@ async function getSuggested() {
 	const suggestedWatch = [];
 	data.forEach((element) => {
 		suggestedWatch.push(
-			`<a href = "../details/index.html?id=${element.id}">
+			`<a href = "../details/index.html?id=${element.id}" class="relative w-max">
 			<img src = ${element.image} class = "w-40 h-60 rounded-2xl"/>
+			<span class="bg-white absolute top-0 opacity-0 w-full h-full flex items-center justify-center text-center text-xl hover:opacity-50">${element.rating}/10</span>
 			</a>`
 		);
 	});
@@ -32,8 +34,9 @@ async function getPrevious() {
 	const previousWatch = [];
 	data.forEach((element) => {
 		previousWatch.push(
-			`<a href = "../details/index.html?id=${element.id}">
-            <img src = ${element.image} class = "w-40 h-60 rounded-2xl" />
+			`<a href = "../details/index.html?id=${element.id}" class="relative w-max">
+            	<img src = ${element.image} class = "w-40 h-60 rounded-2xl" />
+				<span class="bg-white absolute top-0 opacity-0 w-full h-full flex items-center justify-center text-center text-xl hover:opacity-50">${element.rating}/10</span>
 			</a>`
 		);
 	});
@@ -46,7 +49,7 @@ async function renderElement() {
 	const previousWatch = await getPrevious();
 	document.body.style.opacity = "1";
 	const text = `
-    <div>
+    <div class="w-fit">
         <span class="text-xl font-medium">Currently Watching</span>
         <div class="flex flex-row gap-4">
             ${currentWatch.join("")}
@@ -79,17 +82,20 @@ function titleCase(string) {
 
 async function searchMovie() {
 	const input = titleCase(document.getElementById("search").value);
-	const response = await fetch(`http://localhost:3000/movies?title=${input}`);
+	const response = await fetch(
+		`http://localhost:3000/movies?title_like=${input}`
+	);
 	const data = await response.json();
+	console.log(data);
 	const text = [];
 	data.forEach((element) => {
 		text.push(`
 		<a href="../details/index.html?id=${element.id}" class="w-fit">
-		<div class="flex flex-row gap-8"><img
-		src="${element.image}"
-		class="w-40 h-60 rounded-2xl blur-0"
-	/>
-	<span class="text-2xl">${element.title}</span></div></a>`);
+			<div class="flex flex-row gap-8">
+				<img src="${element.image}" class="w-40 h-60 rounded-2xl blur-0"/>
+				<span class="text-2xl">${element.title}</span>
+			</div>
+		</a>`);
 	});
 	const parent = `<div class="flex flex-col gap-8">
 	<span class = "text-blue-700 ml-auto text-2xl w-fit" id="close-btn">X</span>
