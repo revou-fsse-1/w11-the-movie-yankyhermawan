@@ -26,12 +26,17 @@
 						<p>Watchlist</p>
 					</a>
 				</div>
-				<div class="col-start-2 col-end-5 hidden xl:block lg:block">
+				<div class="col-start-2 col-end-5 hidden xl:block lg:block relative">
 					<input
 						type="text"
 						placeholder="&#xF002; Search a movie or a series"
 						class="text-center w-full bg-gray-200 rounded-full h-16"
+						id="search"
 					/>
+					<div
+						class="before:blur-sm h-fit absolute w-full bg-white opacity-80 flex flex-col flex-wrap pt-4 rounded-2xl"
+						id="search-result"
+					></div>
 				</div>
 
 				<div

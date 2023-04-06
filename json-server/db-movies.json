@@ -139,7 +139,7 @@
         "Drama"
       ],
       "trailer": "https://www.youtube.com/embed/GokKUqLcvD8",
-      "imdb_rating": 9,
+      "rating": 9,
       "isWatched": false
     },
     {
@@ -154,7 +154,7 @@
         "Drama"
       ],
       "trailer": "https://www.youtube.com/embed/neY2xVmOfUM",
-      "imdb_rating": 8.2,
+      "rating": 8.2,
       "isWatched": false
     },
     {
@@ -169,7 +169,7 @@
         "superhero"
       ],
       "trailer": "https://www.youtube.com/embed/TcMBFSGVi1c",
-      "imdb_rating": 8.4,
+      "rating": 8.4,
       "isWatched": false
     },
     {
@@ -184,7 +184,7 @@
         "superhero"
       ],
       "trailer": "https://www.youtube.com/embed/6ZfuNTqbHE8",
-      "imdb_rating": 8.4,
+      "rating": 8.4,
       "isWatched": false
     },
     {
@@ -288,7 +288,7 @@
         "Drama"
       ],
       "trailer": "https://www.youtube.com/embed/GokKUqLcvD8",
-      "imdb_rating": 9,
+      "rating": 9,
       "isWatched": false
     },
     {
@@ -303,7 +303,7 @@
         "Drama"
       ],
       "trailer": "https://www.youtube.com/embed/neY2xVmOfUM",
-      "imdb_rating": 8.2,
+      "rating": 8.2,
       "isWatched": false
     },
     {
@@ -318,7 +318,7 @@
         "superhero"
       ],
       "trailer": "https://www.youtube.com/embed/TcMBFSGVi1c",
-      "imdb_rating": 8.4,
+      "rating": 8.4,
       "isWatched": false
     },
     {
@@ -333,7 +333,7 @@
         "superhero"
       ],
       "trailer": "https://www.youtube.com/embed/6ZfuNTqbHE8",
-      "imdb_rating": 8.4,
+      "rating": 8.4,
       "isWatched": false
     }
   ],
@@ -429,7 +429,7 @@
         "Drama"
       ],
       "trailer": "https://www.youtube.com/embed/GokKUqLcvD8",
-      "imdb_rating": 9,
+      "rating": 9,
       "isWatched": false
     },
     {
@@ -444,7 +444,7 @@
         "Drama"
       ],
       "trailer": "https://www.youtube.com/embed/neY2xVmOfUM",
-      "imdb_rating": 8.2,
+      "rating": 8.2,
       "isWatched": false
     },
     {
@@ -459,7 +459,7 @@
         "superhero"
       ],
       "trailer": "https://www.youtube.com/embed/TcMBFSGVi1c",
-      "imdb_rating": 8.4,
+      "rating": 8.4,
       "isWatched": false
     },
     {
@@ -474,42 +474,11 @@
         "superhero"
       ],
       "trailer": "https://www.youtube.com/embed/6ZfuNTqbHE8",
-      "imdb_rating": 8.4,
+      "rating": 8.4,
       "isWatched": false
     }
   ],
   "watchlist": [
-    {
-      "id": 6,
-      "title": "The Dark Knight",
-      "image": "https://th.bing.com/th/id/OIP.NN9rKH-vZbFgtH4FuoW7OwHaLH?w=115&h=180&c=7&r=0&o=5&pid=1.7",
-      "synopsis": "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.",
-      "year": 2008,
-      "genre": [
-        "Action",
-        "Crime",
-        "Drama"
-      ],
-      "trailer": "https://www.youtube.com/embed/EXeTwQWrcwY",
-      "rating": 9,
-      "isWatched": false
-    },
-    {
-      "id": 1,
-      "title": "Avatar",
-      "image": "https://media.21cineplex.com/webcontent/gallery/pictures/16625437697033_405x594.jpg",
-      "synopsis": "Avatar akan kembali ke layar lebar.Seorang Marinir lumpuh dikirim ke bulan Pandora untuk menjalani misi khusus namun, ia justru dilema antara mengikuti perintah atau melindungi dunia baru yang pelan-pelan ia panggil rumah",
-      "genre": [
-        "Action",
-        "Adventure",
-        "Fantasy"
-      ],
-      "production": "20th Century Studios",
-      "trailer": "https://www.youtube.com/embed/NZrX_ES93JA",
-      "rating": 8.5,
-      "isWatch": false,
-      "isPrevious": false
-    },
     {
       "id": 2,
       "title": "One Piece Film: Red",
@@ -525,6 +494,21 @@
       "rating": 8.5,
       "isWatch": false,
       "isPrevious": false
+    },
+    {
+      "id": 6,
+      "title": "The Dark Knight",
+      "image": "https://th.bing.com/th/id/OIP.NN9rKH-vZbFgtH4FuoW7OwHaLH?w=115&h=180&c=7&r=0&o=5&pid=1.7",
+      "synopsis": "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.",
+      "year": 2008,
+      "genre": [
+        "Action",
+        "Crime",
+        "Drama"
+      ],
+      "trailer": "https://www.youtube.com/embed/EXeTwQWrcwY",
+      "rating": 9,
+      "isWatched": false
     }
   ]
 }

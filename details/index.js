@@ -52,6 +52,35 @@ async function isBookmark() {
 	}
 }
 
+async function searchMovie() {
+	const input = titleCase(document.getElementById("search").value);
+	const response = await fetch(`http://localhost:3000/movies?title=${input}`);
+	const data = await response.json();
+	const text = [];
+	data.forEach((element) => {
+		text.push(`
+		<a href="../details/index.html?id=${element.id}" class="w-fit">
+		<div class="flex flex-row gap-8"><img
+		src="${element.image}"
+		class="w-40 h-60 rounded-2xl blur-0"
+	/>
+	<span class="text-2xl">${element.title}</span></div></a>`);
+	});
+	const parent = `<div class="flex flex-col gap-8">
+	<span class = "text-blue-700 ml-auto text-2xl w-fit" id="close-btn">X</span>
+	${text.join("")}
+	</div>`;
+	const searchResult = document.getElementById("search-result");
+	searchResult.innerHTML = parent;
+	document.getElementById("close-btn").addEventListener("click", () => {
+		const parent = document.getElementById("search-result");
+		document.getElementById("search").value = "";
+		while (parent.firstChild) {
+			parent.removeChild(parent.firstChild);
+		}
+	});
+}
+
 async function addBookmark() {
 	const dataToAdd = await getData();
 	const url = `http://localhost:3000/watchlist`;
@@ -84,6 +113,14 @@ function options() {
 	}
 }
 
+function titleCase(string) {
+	var sentence = string.toLowerCase().split(" ");
+	for (var i = 0; i < sentence.length; i++) {
+		sentence[i] = sentence[i][0].toUpperCase() + sentence[i].slice(1);
+	}
+	return sentence;
+}
+
 if (sessionStorage.getItem("username") !== null) {
 	getDetails();
 	isBookmark();
@@ -93,3 +130,7 @@ if (sessionStorage.getItem("username") !== null) {
 
 document.getElementById("btn").addEventListener("click", () => options());
 document.getElementById("btn-sm").addEventListener("click", () => options());
+
+document
+	.getElementById("search")
+	.addEventListener("change", () => searchMovie());
