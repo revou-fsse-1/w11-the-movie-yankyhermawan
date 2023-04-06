@@ -4,7 +4,7 @@ async function getCurrentWatch() {
 	const currentWatch = [];
 	data.forEach((element) => {
 		currentWatch.push(
-			`<a href = "../details?id=${element.id}">
+			`<a href = "../details/index.html?id=${element.id}">
 			<img src = ${element.image} class = "w-40 h-60 rounded-2xl"/>
 			</a>`
 		);
@@ -18,7 +18,7 @@ async function getSuggested() {
 	const suggestedWatch = [];
 	data.forEach((element) => {
 		suggestedWatch.push(
-			`<a href = "../details?id=${element.id}">
+			`<a href = "../details/index.html?id=${element.id}">
 			<img src = ${element.image} class = "w-40 h-60 rounded-2xl"/>
 			</a>`
 		);
@@ -32,7 +32,7 @@ async function getPrevious() {
 	const previousWatch = [];
 	data.forEach((element) => {
 		previousWatch.push(
-			`<a href = "../details?id=${element.id}">
+			`<a href = "../details/index.html?id=${element.id}">
             <img src = ${element.image} class = "w-40 h-60 rounded-2xl" />
 			</a>`
 		);
@@ -69,4 +69,8 @@ async function renderElement() {
 	document.getElementById("section-container").innerHTML += text;
 }
 
-renderElement();
+if (sessionStorage.getItem("username") !== null) {
+	renderElement();
+} else {
+	window.location.href = "../login";
+}

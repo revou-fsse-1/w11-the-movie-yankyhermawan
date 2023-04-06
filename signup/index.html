@@ -11,16 +11,23 @@
 			href="https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap"
 		/>
 		<link rel="stylesheet" href="../src/output.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+			integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
 	</head>
 	<body>
-		<main class="mt-40">
+		<main class="mt-16">
 			<div class="mx-auto w-max flex flex-col gap-16">
 				<div class="text-7xl font-sans font-bold flex flex-col gap-5">
 					<p>The</p>
 					<p>Movie</p>
 					<p>Watchlist</p>
 				</div>
-				<div class="flex flex-col gap-4">
+				<form class="flex flex-col gap-4" id="form">
 					<input
 						type="text"
 						placeholder="Username"
@@ -33,30 +40,32 @@
 						class="bg-gray-300 w-full h-14 py-4 pl-6 text-xl rounded-2xl"
 					/>
 					<input
-						type="text"
+						type="password"
 						placeholder="Password"
 						id="password"
 						class="bg-gray-300 w-full h-14 py-4 pl-6 text-xl rounded-2xl"
 					/>
 					<input
-						type="text"
+						type="password"
 						placeholder="Confirm Password"
 						id="password-confirm"
 						class="bg-gray-300 w-full h-14 py-4 pl-6 text-xl rounded-2xl"
 					/>
-				</div>
-				<div>
-					<button
-						class="bg-cyan-400 w-full h-14 py-4 pl-6 text-xl rounded-2xl text-white"
-						id="btn"
-					>
-						Register
-					</button>
-					<span
-						>Already have an account?
-						<a href="../login" class="font-bold">LogIn</a></span
-					>
-				</div>
+					<span id="confirm-text"></span>
+					<div>
+						<button
+							class="bg-cyan-400 w-full h-14 text-xl rounded-2xl text-white"
+							id="btn"
+							disabled="true"
+						>
+							Register
+						</button>
+						<span
+							>Already have an account?
+							<a href="../login" class="font-bold">LogIn</a></span
+						>
+					</div>
+				</form>
 			</div>
 		</main>
 		<script src="index.js" async defer></script>
