@@ -13,46 +13,48 @@ async function getAllWatchList() {
 	document.querySelector("#section-container").innerHTML = watchList.join("");
 }
 
-function titleCase(string) {
-	var sentence = string.toLowerCase().split(" ");
-	for (var i = 0; i < sentence.length; i++) {
-		sentence[i] = sentence[i][0].toUpperCase() + sentence[i].slice(1);
-	}
-	return sentence;
-}
-
 async function searchMovie() {
-	const input = titleCase(document.getElementById("search").value);
-	const response = await fetch(`http://localhost:3000/movies?title=${input}`);
-	const data = await response.json();
+	const input = document.getElementById("search").value;
+	const response = await fetch(`http://localhost:3000/movies`);
+	const rawData = await response.json();
+	const multipleData = rawData.filter((element) =>
+		element.title.toLowerCase().includes(input.toLowerCase())
+	);
+	const data = multipleData.filter(
+		(obj, index, self) =>
+			index === self.findIndex((t) => t.id === obj.id && t.title === obj.title)
+	);
 	const text = [];
 	data.forEach((element) => {
 		text.push(`
-		<a href="../details/index.html?id=${element.id}" class="w-fit">
-		<div class="flex flex-row gap-8"><img
-		src="${element.image}"
-		class="w-40 h-60 rounded-2xl blur-0"
-	/>
-	<span class="text-2xl">${element.title}</span></div></a>`);
+		<a href="../details/index.html?id=${element.id}" class="w-fit ml-4">
+			<div class="flex flex-row gap-8">
+				<img src="${element.image}" class="w-40 h-60 rounded-2xl blur-0"/>
+				<span class="text-3xl text-white">${element.title}</span>
+			</div>
+		</a>`);
 	});
 	const parent = `<div class="flex flex-col gap-8">
-	<span class = "text-blue-700 ml-auto text-2xl w-fit" id="close-btn">X</span>
+	<span class = "text-blue-700 ml-auto text-2xl w-fit mr-4" id="close-btn">X</span>
 	${text.join("")}
 	</div>`;
 	const searchResult = document.getElementById("search-result");
 	searchResult.innerHTML = parent;
+	document.getElementById("search-result").classList.remove("hidden");
+	document.getElementById("search-result").classList.add("flex");
 	document.getElementById("close-btn").addEventListener("click", () => {
 		const parent = document.getElementById("search-result");
+		parent.classList.remove("flex");
+		parent.classList.add("hidden");
 		document.getElementById("search").value = "";
 		while (parent.firstChild) {
 			parent.removeChild(parent.firstChild);
 		}
 	});
 }
-
 document
 	.getElementById("search")
-	.addEventListener("change", () => searchMovie());
+	.addEventListener("input", () => searchMovie());
 
 if (sessionStorage.getItem("username") !== null) {
 	getAllWatchList();
