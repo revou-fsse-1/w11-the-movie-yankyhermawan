@@ -103,6 +103,7 @@ async function addBookmark() {
 	};
 	const response = await fetch(url, option);
 	await response.json();
+	location.reload();
 }
 
 async function removeBookmark() {
@@ -112,6 +113,7 @@ async function removeBookmark() {
 	};
 	const response = await fetch(url, option);
 	await response.json();
+	location.reload();
 }
 
 function options() {
