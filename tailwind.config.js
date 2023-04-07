@@ -4,6 +4,7 @@ module.exports = {
 	theme: {
 		fontFamily: {
 			sans: ["Poppins", "sans-serif"],
+			roboto: ["Roboto", "sans-serif"],
 			screens: {
 				sm: "390px",
 				lg: "1024px",

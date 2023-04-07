@@ -6,7 +6,7 @@ async function getCurrentWatch() {
 		currentWatch.push(
 			`<a href = "../details/index.html?id=${element.id}" class="relative w-max">
 			<img src = ${element.image} class = "w-40 h-60 rounded-2xl"/>
-			<span class="bg-white absolute top-0 opacity-0 w-full h-full flex items-center justify-center text-center text-xl hover:opacity-50">${element.rating}/10</span>
+			<span class="bg-black text-white rounded-2xl absolute top-0 opacity-0 w-full h-full flex items-center justify-center text-center text-xl hover:opacity-50">${element.rating}/10</span>
 			</a>`
 		);
 	});
@@ -118,8 +118,8 @@ document
 
 document.getElementById("search-mini").addEventListener("click", () => {
 	document.getElementById("search-mini").classList.add("hidden");
-	document.getElementById("search").classList.remove("hidden");
-	document.getElementById("search").classList.add("block");
+	document.getElementById("search-container").classList.remove("hidden");
+	document.getElementById("search-container").classList.add("block");
 });
 
 if (sessionStorage.getItem("username") !== null) {

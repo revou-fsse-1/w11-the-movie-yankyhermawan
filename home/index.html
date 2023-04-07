@@ -15,8 +15,14 @@
 			crossorigin="anonymous"
 			referrerpolicy="no-referrer"
 		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+			rel="stylesheet"
+		/>
 	</head>
-	<body class="opacity-50 overflow-x-hidden relative">
+	<body class="opacity-50 overflow-x-hidden relative font-roboto">
 		<main>
 			<header class="mt-7 mx-7 lg:mx-20">
 				<div class="grid grid-cols-5 justify-between text gap-2">
@@ -27,7 +33,10 @@
 							<p>Watchlist</p>
 						</a>
 					</div>
-					<div class="col-start-2 col-end-5 hidden xl:block lg:block relative">
+					<div
+						class="col-start-2 col-end-5 hidden xl:block lg:block relative"
+						id="search-container"
+					>
 						<input
 							type="text"
 							placeholder="&#xF002; Search a movie or a series"
@@ -35,7 +44,7 @@
 							id="search"
 						/>
 						<div
-							class="before:blur-sm h-fit absolute w-full bg-white opacity-80 flex flex-col flex-wrap pt-4 rounded-2xl"
+							class="before:blur-sm h-fit absolute w-full bg-white opacity-80 flex flex-col flex-wrap pt-4 rounded-2xl z-10"
 							id="search-result"
 						></div>
 					</div>
